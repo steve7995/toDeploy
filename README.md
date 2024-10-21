@@ -87,6 +87,21 @@ its a task management app when user on login can view different tasks and also c
   GET /api/refetch
 ```
 
+flow:
+
+first user must register and then followed by login he is redirected to the main page where he can handle tasks
+
+![p1](https://github.com/user-attachments/assets/5c405f22-0f68-45f2-b785-0fcc81cab919)
+
+![p2](https://github.com/user-attachments/assets/01922413-eabe-4665-8049-7a6903cfad28)
+
+![task images](https://github.com/user-attachments/assets/44cb142d-736e-48fb-8ac4-5831c6601766)
+
+Technologies Used:
+
+React js ,tailwind css, moongo db , express js , render
+
+
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | verifies the jwt token and gets the user details |
