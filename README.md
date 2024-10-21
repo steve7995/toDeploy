@@ -1,31 +1,93 @@
-Task Management app 
 
-D. Anand Steven Chris 
-ve3 assignment.
+# VE3 Assigment Task management app
+its a task management app when user on login can view different tasks and also can update them ,delete them and also create new tasks
 
-technologies Used:
-frontend: React js , tailwind css
 
-backend : Express js , mongodb
+## API Reference
 
-deployment: Render
+#### Get all tasks
 
-installation:
-first run npm install in the backend folder to install the required node modules
-To start the server run node index.js
+```http
+  GET /api/tasks
+```
 
-To start frontend go to frotend folder and go to task folder and then run npm install followed by npm run dev to start frontend server
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | fetches all the tasks present |
 
-deployed link: https://frontend-yge8.onrender.com/
+#### Get a particular task based on id
 
-How to use the software:
-First register using a email 
-![p1](https://github.com/user-attachments/assets/f27f420f-b42f-4d32-887e-9aad7671ad48)
-Then after reegistering enter those credentials once again to login
-![p2](https://github.com/user-attachments/assets/fb3427bc-d03b-45be-9402-48d905aace48)
+```http
+  GET /api/tasks/${id}
+```
 
-Finally you will have task page where u can see all the tasks in order , to create new task 
-press add task button
-to update or delete press update and delete button respectively.
-![task images](https://github.com/user-attachments/assets/b20402d0-4066-4f1b-8abc-23242c05890a)
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | get the task based on id|
+
+#### CREATE NEW TASK 
+```http
+  POST /api/tasks
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | create a new task |
+
+#### UPDATE TASK
+
+```http
+  PUT /api/tasks/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | update the task based on id|
+
+#### DELETE TASK
+```http
+  DELETE /api/tasks/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | delete the task based on id|
+
+#### CREATE NEW USER
+```http
+  POST /api/register
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | register a new user |
+
+#### LOGIN  USER
+
+```http
+  POST /api/login
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | to login the existing user|
+
+#### LOGOUT  USER
+
+```http
+  GET /api/logout
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | to logout  user|
+
+#### FETCHING USER DATA WHEN PAGE GETS REFRESH
+```http
+  GET /api/refetch
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | verifies the jwt token and gets the user details |
 
