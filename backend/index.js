@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Your frontend URL
+  origin: 'https://frontend-yge8.onrender.com', // Your frontend URL
   credentials: true // Allow credentials
 }));
 // .
