@@ -87,6 +87,10 @@ its a task management app when user on login can view different tasks and also c
   GET /api/refetch
 ```
 
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | verifies the jwt token and gets the user details |
+
 flow:
 
 first user must register and then followed by login he is redirected to the main page where he can handle tasks
@@ -101,8 +105,5 @@ Technologies Used:
 
 React js ,tailwind css, moongo db , express js , render
 
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | verifies the jwt token and gets the user details |
-
+Done by D.ANAND STEVEN CHRIS 
+mrwritersteven@gmail.com
