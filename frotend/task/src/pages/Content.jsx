@@ -12,7 +12,7 @@ const Content = () => {
   const [currentTaskId, setCurrentTaskId] = useState(null);
   const fetchTasks = async () => {
  try {
-    const response = await axios.get('http://localhost:8000/tasks');
+    const response = await axios.get('https://todeploy.onrender.com/tasks');
     setTasks(response.data);
     console.log(response.data);
   } catch (error) {
@@ -26,10 +26,10 @@ const Content = () => {
  const handleAddTask = async (taskContent) => {
     if (currentTaskIndex !== null) {
       // Update existing task
-      await axios.put(`http://localhost:8000/tasks/${currentTaskId}`, { content: taskContent });
+      await axios.put(`https://todeploy.onrender.com/tasks/${currentTaskId}`, { content: taskContent });
     } else {
       // Add new task
-      await axios.post('http://localhost:8000/tasks', { content: taskContent });
+      await axios.post('https://todeploy.onrender.com/tasks', { content: taskContent });
     }
     resetModal();
     fetchTasks(); // Refresh tasks
@@ -43,7 +43,7 @@ const Content = () => {
 
   const handleDeleteTask = async (index) => {
     const taskId = tasks[index]._id;
-    await axios.delete(`http://localhost:8000/tasks/${taskId}`);
+    await axios.delete(`https://todeploy.onrender.com/tasks/${taskId}`);
     fetchTasks(); // Refresh tasks
   };
 

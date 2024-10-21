@@ -10,7 +10,7 @@ const Signup = () => {
     const navigate = useNavigate();
     const handleSubmit = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/register", {
+      const res = await axios.post("https://todeploy.onrender.com/register", {
         username,
         email,
         password,
