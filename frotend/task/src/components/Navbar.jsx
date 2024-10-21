@@ -10,7 +10,7 @@ const Navbar = () => {
     const handleLogout = async (e) => {
     e.preventDefault()
     try {
-      const res=await axios.get("http://localhost:8000/logout",{withCredentials:true})
+      const res=await axios.get("https://todeploy.onrender.com/logout",{withCredentials:true})
       setUser(null);
       console.log(res);
       navigate("/login");
